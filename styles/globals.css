@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Light Theme Uncomment this layer components and comment below one */
+
+@layer components {
+  .bg-primary {
+    @apply bg-white;
+  }
+
+  .bg-secondary {
+    @apply bg-gray-100;
+  }
+
+  .bg-tertiary {
+    @apply bg-gray-300;
+  }
+
+  .bg-quaternary {
+    @apply bg-gray-400;
+  }
+
+  .text-primary {
+    @apply text-stone-950;
+  }
+
+  .text-secondary {
+    @apply text-white;
+  }
+  .btn {
+    @apply my-2 rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600 disabled:bg-emerald-300;
+  }
+
+  .side-menu-item {
+    @apply hover:bg-tertiary m-2 flex items-center gap-4 rounded-md p-2;
+  }
+
+  .prose
+    :where(h1, h2, h3, h4, h5, strong):not(:where([class~="not-prose"] *)) {
+    @apply text-primary;
+  }
+}
+
+/* For Dark Theme Uncomment this layer components and comment above one */
+/* @layer components {
+  .bg-primary {
+    @apply bg-gray-900;
+  }
+
+  .bg-secondary {
+    @apply bg-gray-800;
+  }
+
+  .bg-tertiary {
+    @apply bg-gray-700;
+  }
+
+  .bg-quaternary {
+    @apply bg-gray-600;
+  }
+
+  .text-primary {
+    @apply text-white;
+  }
+
+  .text-secondary {
+    @apply text-black;
+  }
+  .btn {
+    @apply my-2 rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600 disabled:bg-emerald-300;
+  }
+
+  .side-menu-item {
+    @apply hover:bg-tertiary m-2 flex items-center gap-4 rounded-md p-2;
+  }
+
+  .prose
+    :where(h1, h2, h3, h4, h5, strong):not(:where([class~="not-prose"] *)) {
+    @apply text-primary;
+  }
+  
+} */
+
+/* Common CSS DO NOT TOUCH */
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-gray-700;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
